@@ -1,0 +1,26 @@
+ Các bước cài đặt Ruby on rails :
+B1: Download phần mềm RubyMine theo link:
+https://www.jetbrains.com/ruby/
+B2: Download Ruby theo link: https://rubyinstaller.org/
+B3: Download Node.js theo link https://nodejs.org/en/download/
+B4: Download Yarn theo link https://classic.yarnpkg.com/en/docs/install#windows-stable
+B5: Cài đặt Rails trên console hoặc git bash bằng câu lệnh: gem install rails
+B6: Tạo Project theo câu lệnh: rails new tên_project.
+B7: Dùng câu lệnh rails s để test thử đã chạy được project trên website
+B8: Cài đặt mysys 2 theo đường link https://www.msys2.org/
+B9: Tạo thêm 2 thư mục có tên lib và include trong địa chỉ thư mục C:\xampp\mysql
+B10: Chạy câu lệnh  gem install mysql2 -- --with-mysql-dir=C:\xampp\mysql vào console của project đó
+B11: Trong file config/database.yml thêm câu 
+development:
+   adapter: mysql2
+   encoding: utf8
+   database: test
+   username: root
+   password:
+   host: 127.0.0.1
+   port: 3306 
+Và comment dòng
+ #development:
+    #  <<: *default
+    #  database: db/development.sqlite3
+B12: Trong Gemfile thêm dòng gem 'mysql2'
